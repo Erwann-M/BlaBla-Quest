@@ -1,0 +1,43 @@
+@use 'src/styles/_vars';
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+
+    .container {
+        &__background {
+            padding: 1rem 0;
+            width: 100%;
+            background: url(../../assets/img/background.jpg);
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.493);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 95%);
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+
+        &__background {
+            padding-top: 2rem !important;
+            padding-bottom: 7rem !important;
+            clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 88%) !important;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .container {
+
+        &__map {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

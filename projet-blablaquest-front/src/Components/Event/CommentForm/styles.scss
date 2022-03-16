@@ -1,0 +1,44 @@
+@use 'src/styles/_vars';
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &__group {
+    width: 90%;
+    textarea {
+      width: 90%;
+      height: 5rem;
+      border-radius: 5px;
+      border: none;
+      padding: 10px 15px;
+      margin-bottom: 1rem;
+
+      &:focus {
+        box-shadow: 0px 0px 2px 1px vars.$secondary-color inset;
+        outline: none;
+      }
+    }
+
+  }
+
+  &__button-submit {
+    height: fit-content;
+    font-family: vars.$font-black;
+    font-size: 1rem;
+    font-weight: bold;
+    color: vars.$color-alt;
+    padding: 0.8rem 2rem;
+    margin-bottom: 1rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: vars.$color-dark;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+}

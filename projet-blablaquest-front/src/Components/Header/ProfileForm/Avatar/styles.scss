@@ -1,0 +1,11 @@
+@use 'src/styles/_vars';
+
+
+.upload-button {
+  background-color: vars.$color-dark !important;
+  color: vars.$color-main !important;
+  font-family: vars.$font-black !important;
+  font-size: 0.7rem !important;
+  width: fit-content !important;
+  padding: 0.3rem 0.5rem !important;
+}

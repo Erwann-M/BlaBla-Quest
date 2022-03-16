@@ -1,0 +1,11 @@
+@use 'src/styles/_vars';
+
+.error-404 {
+
+    width: 100vw;
+    height: 80vh;
+    background-image: url(../../assets/img/404.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

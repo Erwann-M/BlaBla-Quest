@@ -1,0 +1,9 @@
+@use 'src/styles/_vars';
+
+.event-create-page {
+  width: 100%;
+  background-image: url(../../assets/img/backgroud-alt-3.jpg);
+  background-size: cover;
+  
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.503);
+}

@@ -1,0 +1,23 @@
+@use 'src/styles/_vars';
+
+.home-description {
+  font-size: 1rem;
+  font-family: vars.$font;
+  color: aliceblue;
+  font-weight: bolder;
+
+  span {
+    font-size: 2rem;
+    font-family: vars.$font-black;
+    color: vars.$color-dark;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    margin-right: 2rem;
+    
+    span {
+      font-size: 3rem;
+    }
+  }
+}

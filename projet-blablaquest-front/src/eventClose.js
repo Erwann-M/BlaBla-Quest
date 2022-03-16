@@ -1,0 +1,38 @@
+export default [
+    {
+        id: 1,
+        name: "BlaBlaQuest",
+        game: "Carcassone",
+        date: "10/02/2022",
+        city: "Roubaix",
+        nbrOfPlayers: 2,
+        nbrOfPlayersMax: 5,
+    },
+    {
+        id: 2,
+        name: "BlaBlaQuest",
+        game: "Everdell",
+        date: "10/02/2022",
+        city: "Wattrelos",
+        nbrOfPlayers: 9,
+        nbrOfPlayersMax: 10,
+    },
+    {
+        id: 3,
+        name: "BlaBlaQuest",
+        game: "Obsession",
+        date: "10/02/2022",
+        city: "Tourcoing",
+        nbrOfPlayers: 4,
+        nbrOfPlayersMax: 5,
+    },
+    {
+        id: 4,
+        name: "BlaBlaQuest",
+        game: "Root",
+        date: "10/02/2022",
+        city: "Lille",
+        nbrOfPlayers: 3,
+        nbrOfPlayersMax: 5,
+    },
+]

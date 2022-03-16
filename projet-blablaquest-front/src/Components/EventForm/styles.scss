@@ -1,0 +1,179 @@
+@use 'src/styles/_vars';
+
+.event-form-container {
+  position: relative;
+  
+}
+
+.event-form {
+  font-family: vars.$font;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.404);
+
+  &__title {
+    font-size: vars.$font-size-title;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: vars.$color-white;
+  }
+
+  &__home-button {
+    border: none;
+    padding: 0.5rem 0.8rem;
+    background-color: vars.$color-dark;
+    border-radius: 5px;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: vars.$color-dark-alt;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      font-size: vars.$font-size-subtitle;
+      font-weight: 500;
+      color: vars.$color-alt;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: vars.$color-white;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      width: 80%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+
+      &:focus {
+        box-shadow: 0px 0px 2px 1px vars.$secondary-color inset;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 50px;
+    }
+
+    &__select {
+      width: 50%;
+    }
+  }
+
+  &__calendar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__success {
+    font-family: vars.$font-regular;
+    color: vars.$valid-color;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    animation: pop-success 0.5s;
+  }
+
+  &__button-submit {
+    margin-bottom: 1rem;
+    width: 10rem;
+    align-self: center;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    background-color: vars.$color-dark;
+    border-radius: 5px;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: vars.$color-dark-alt;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 70%;
+
+    &__home-button {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 60%;
+    &__group {
+      &__container {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+        &--desktop {
+          width: 50%;
+        }
+      }
+
+      textarea {
+        width: 70%;
+        height: 100px;
+      }
+
+      &__select-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 3px solid vars.$color-alt;
+      }
+
+      &__select {
+        width: 20% !important;
+      }
+
+    }
+
+  }
+}
+
+.is-valid {
+  box-shadow: 0px 0px 4px 1px vars.$valid-color inset;
+}
+
+.is-invalid {
+  box-shadow: 0px 0px 4px 1px vars.$error-color inset;
+}
+
+.invalid-feedback {
+  color: vars.$error-color;
+}
+
+@keyframes pop-success {
+  0% {
+    font-size: 0.1rem;
+  }
+
+  50% {
+    font-size: 1.05rem;
+  }
+
+  100% {
+    font-size: 1rem;
+  }
+}

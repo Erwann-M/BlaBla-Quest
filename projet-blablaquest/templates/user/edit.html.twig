@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<h1 class=" mt-3">Modifier Utilisateur</h1>
+
+	{{ include('user/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+	<a href="{{ path('user_browse') }}">Retour à la liste</a>
+
+	<form action="{{ path('user_delete', {id: user.id}) }}" class="d-inline" method="post">
+
+
+		<button class="btn btn-link p-0 mb-2 fs-4">
+			<i class="fa fa-trash" aria-hidden="true"></i>
+		</button>
+        
+		<input
+		type="hidden" name="_method" value="delete">
+		{# On ajoute un token anti-csrf pour s'assurer que la requête reçue n'est pas forgée #}
+		<input type="hidden" name="_token" value="{{ csrf_token('user_delete' ~ user.id) }}">
+	</form>
+
+{% endblock %}

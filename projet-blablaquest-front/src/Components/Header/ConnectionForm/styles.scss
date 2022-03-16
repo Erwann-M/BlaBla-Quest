@@ -1,0 +1,96 @@
+@use 'src/styles/_vars';
+
+.connection {
+  animation: displaySmooth 1s ease-in-out;
+  top: 6rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 85vw;
+  padding: 0.1rem 1rem;
+  background-color: vars.$color-light;
+  border: 1px solid vars.$color-alt;
+  border-radius: 10px;
+  z-index: 100;
+
+
+  .errorLogin {
+    color: red;;
+    margin-bottom: 0.7rem;
+  }
+
+  h2 {
+    font-size: vars.$font-size-title;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  input {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  &__submit {
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    border: none;
+    background-color: vars.$color-alt;
+    color: vars.$color-dark;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 425px) {
+    width: 70%;
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.75);
+  }
+
+  @media (min-width: 768px) {
+    width: 23rem;
+    transform: none;
+    left: auto;
+    right: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    // width: 30%;
+  }
+
+  @media (min-width: 1440px) {
+    // width: 20%;
+  }
+}
+
+@keyframes displaySmooth {
+  0% {
+    right: -250%;
+  }
+
+  70% {
+    right: 2rem;
+  }
+
+  86% {
+    right: 0.3rem;
+  }
+
+  100% {
+    right: 1rem;
+  }
+}

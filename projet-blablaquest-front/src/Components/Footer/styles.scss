@@ -1,0 +1,34 @@
+@use 'src/styles/_vars';
+
+
+.footer {
+    width: 100%;
+    position: relative;
+    border-top: solid 1px vars.$color-dark;;
+    background-color: vars.$color-alt;
+    color: vars.$color-dark;
+    padding: 0.5rem 0;
+
+    a {
+        color: vars.$color-dark;
+    }
+
+    @media (min-width: 768px) {
+        display: block;
+        height: 10%;
+        width: 100%;
+        border-top: solid 1px vars.$color-dark;;
+        background-color: vars.$color-alt;
+        color: vars.$color-dark;
+        padding-top: 0.5rem;
+    
+        &__social {
+            
+            &--icon {
+                margin-right: 0.5rem;
+    
+            }
+        }
+    }
+}
+

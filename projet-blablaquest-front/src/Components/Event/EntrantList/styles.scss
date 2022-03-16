@@ -1,0 +1,45 @@
+@use 'src/styles/_vars';
+
+.container__modal {
+    border-radius: 5px;
+    background-color: #dcdfee;
+}
+
+.image__user {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.entrant__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-items: center;
+    width: 100%;
+    background-color: vars.$color-white;
+    font-family: vars.$font-black;
+
+    &:hover {
+        background-color: vars.$color-dark;
+    }
+
+    &:hover &--button {
+        background-color: aliceblue;
+        color: vars.$color-dark;
+    }
+
+
+    &--button {
+        border: none;
+        margin-left: 1rem;
+        color: white;
+        background-color: vars.$color-dark;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 5px;
+    }
+}

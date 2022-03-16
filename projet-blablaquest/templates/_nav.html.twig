@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container-fluid">
+		<a class="navbar-brand" href=" {{ path ('home') }} ">BlaBlaQuest</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarColor01">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" href=" {{ path ('home') }} ">Accueil
+						<span class="visually-hidden">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path ('event_browse') }}">Evènements</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path ('game_browse') }}">Jeux</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path ('category_browse') }}">Catégories</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path ('event_comment_browse') }}">Commentaires</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path ('user_browse') }}">Utilisateurs</a>
+				</li>
+
+
+			</ul>
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path ('app_logout') }}">Déconnexion</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://blabla-quest.surge.sh/">Retour au site</a>
+				</li>
+			</ul>
+		</ul>
+	</div>
+</nav>

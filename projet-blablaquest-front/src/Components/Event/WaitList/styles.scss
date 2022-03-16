@@ -1,0 +1,37 @@
+@use 'src/styles/_vars';
+
+.waitlist__content {
+    &--title{
+        font-size: 1.2rem;
+        font-family: vars.$font-black;
+    }
+
+    &--user {
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--title {
+            font-family: vars.$font-regular;
+        }
+
+        &--button {
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &--button--click {
+            border: none;
+            background-color: vars.$color-dark;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 5px;
+            color: aliceblue;
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'roboto';
+  src: url(../assets/font/Roboto/Roboto-Bold.ttf);
+  src: url(../assets/font/Roboto/Roboto-Light.ttf);
+  src: url(../assets/font/Roboto/Roboto-Medium.ttf);
+  src: url(../assets/font/Roboto/Roboto-Regular.ttf);
+  src: url(../assets/font/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'roboto-black';
+  src: url(../assets/font/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'roboto-regular';
+  src: url(../assets/font/Roboto/Roboto-Regular.ttf);
+}
+
+$font: 'roboto';
+$font-black: 'roboto-black';
+$font-regular: 'roboto-regular';
+
+// $color-main: #553350;
+// $color-alt: #3d0b3c;
+// $color-dark: #fdbb65;
+// $color-light: #c299bc;
+
+$color-main: #161627;
+$color-alt: #161627;
+$color-dark: #e48935;
+$color-dark-blur: #e48935;
+$color-dark-alt: #a55c28;
+$color-light: #dcdfee;
+$color-white: whitesmoke;
+$secondary-color: #3e4061;
+$add-color: rgb(137, 207, 123);
+$error-color: rgb(201, 68, 68);
+$valid-color: rgb(69, 163, 69);
+
+$font-size-title: 2rem;
+$font-size-subtitle: 1.5rem;
+$font-size-mintitle: 1.3rem;

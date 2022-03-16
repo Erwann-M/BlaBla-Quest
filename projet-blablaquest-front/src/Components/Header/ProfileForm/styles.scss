@@ -1,0 +1,133 @@
+@use 'src/styles/_vars';
+
+.background__modal {
+  width: 100%;
+  height: 100vh;
+  overflow-x: unset;
+  position: absolute;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.486);
+  backdrop-filter: blur(4px);
+}
+
+.profile-form__main-container {
+  width: 100%;
+  position: fixed;
+  background-color: vars.$color-light;
+  border: 2px solid vars.$color-main;
+  z-index: 100;
+  top: 1rem;
+  border-radius: 10px;
+
+  &__title {
+    margin-top: 1rem;
+    font-family: vars.$font-black;
+    color: vars.$color-main;
+    font-size: vars.$font-size-title;
+  }
+}
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form-control {
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      padding: 10px 15px;
+      margin-bottom: 1rem;
+      font-family: vars.$font;
+      font-weight: bold;
+
+      &:focus {
+        box-shadow: 0px 0px 2px 1px vars.$secondary-color inset;
+        outline: none;
+      }
+    }
+
+    label {
+      font-family: vars.$font;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .is-valid {
+      box-shadow: 0px 0px 4px 1px vars.$valid-color inset;
+    }
+
+    .is-invalid {
+      box-shadow: 0px 0px 4px 1px vars.$error-color inset;
+    }
+
+    .invalid-feedback {
+      margin-top: 0.1rem;
+      font-size: 0.8rem;
+      color: vars.$error-color;
+    }
+  }
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-profile {
+  font-family: vars.$font-black;
+  font-size: 1rem;
+  font-weight: bold;
+  color: vars.$color-alt;
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0.8rem 2rem;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: vars.$valid-color;
+
+  cursor: pointer;
+
+}
+
+.deconnection {
+  background-color: vars.$error-color !important;
+}
+
+@media (min-width: 768px) {
+  .profile-form__main-container {
+    width: 70%;
+    right: 1rem;
+  }
+
+  .profile-form {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-form__main-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .profile-form__main-container {
+    width: 40%;
+  }
+}

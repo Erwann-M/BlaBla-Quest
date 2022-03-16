@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BlaBlaQuest
+{% endblock %}
+
+{% block body %}
+
+	<div class="col-12">
+		<h1>Modifier un évènement</h1>
+	</div>
+
+	{{ form_start(form) }}
+	{{ form_row(form.name)}}
+	{{ form_row(form.description)}}
+	{{ form_row(form.dateTime)}}
+	{{ form_row(form.entrantsNumbers)}}
+	{{ form_row(form.area)}}
+	{{ form_row(form.game)}}
+
+	{# On peut tout à fait insérer le bouton dans le twig plutot que dans le formulaire #}
+	<button class="btn btn-success mb-3">Modifier</button>
+	{{ form_end(form) }}
+
+{% endblock %}
